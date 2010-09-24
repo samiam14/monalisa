@@ -41,6 +41,7 @@ public class MonaLisaPanel extends JPanel {
         Iterator it = polygons.listIterator();
         while (it.hasNext()) {
             ColoredPolygon poly = (ColoredPolygon) it.next();
+            poly.mutate();
             bg.setColor(poly.getColor());
             bg.fillPolygon(poly.getPolygon());
         }
